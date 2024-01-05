@@ -9,7 +9,6 @@ import {
 } from "../controllers/categoryController.js";
 
 import { authenticate, authorizeAdmin } from "../middlewares/authMiddleware.js";
-import asyncHandler from "../middlewares/asyncHandler.js";
 
 router.route("/").post(authenticate, authorizeAdmin, createCategory);
 router.route("/:categoryId").put(authenticate, authorizeAdmin, updateCategory);
