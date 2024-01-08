@@ -14,6 +14,7 @@ import "./Navigation.css";
 import { useSelector, useDispatch } from "react-redux";
 import { useLogoutMutation } from "../../redux/api/usersApiSlice";
 import { logout } from "../../redux/features/auth/authSlice";
+import FavoritesCount from "../Products/FavoritesCount";
 
 const Navigation = () => {
   const { userInfo } = useSelector((state) => state.auth);
@@ -69,19 +70,22 @@ const Navigation = () => {
           <AiOutlineShopping className="mr-2 mt-[3rem]" style={26} />
           <span className="hidden nav-item-name mt-[3rem]">SHOP</span>
         </Link>
-        <Link
-          to="/cart"
-          className="flex items-center transition-transform transform hover:translate-x-2"
-        >
-          <AiOutlineShoppingCart className="mr-2 mt-[3rem]" style={26} />
-          <span className="hidden nav-item-name mt-[3rem]">CART</span>
+
+        <Link to="/cart" className="flex relative">
+          <div className="flex items-center transition-transform transform hover: translate-x-2">
+            <AiOutlineShoppingCart className="mt-[3rem] mr-2" style={26} />
+            <span className="hidden nav-item-name mt-[3rem]">Cart</span>
+          </div>
         </Link>
-        <Link
-          to="/favorite"
-          className="flex items-center transition-transform transform hover:translate-x-2"
-        >
-          <FaHeart className="mr-2 mt-[3rem]" style={26} />
-          <span className="hidden nav-item-name mt-[3rem]">FAVORITES</span>
+
+        <Link to="/favorite" className="flex relative">
+          <div className="flex justify-center items-center transition-transform transform hover:translate-x-2">
+            <FaHeart className="mt-[3rem] mr-2" size={20} />
+            <span className="hidden nav-item-name mt-[3rem]">
+              Favorites
+            </span>{" "}
+            <FavoritesCount />
+          </div>
         </Link>
       </div>
 
