@@ -60,20 +60,21 @@ const Navigation = () => {
           to="/"
           className="flex items-center transition-transform transform hover:translate-x-2"
         >
-          <AiOutlineHome className="mr-2 mt-[3rem]" style={26} />
-          <span className="hidden nav-item-name mt-[3rem]">HOME</span>
+          <AiOutlineHome className="mr-2 mt-[3rem]" size={26} />
+          <span className="hidden nav-item-name mt-[3rem]">Home</span>
         </Link>
+
         <Link
           to="/shop"
           className="flex items-center transition-transform transform hover:translate-x-2"
         >
-          <AiOutlineShopping className="mr-2 mt-[3rem]" style={26} />
-          <span className="hidden nav-item-name mt-[3rem]">SHOP</span>
+          <AiOutlineShopping className="mr-2 mt-[3rem]" size={26} />
+          <span className="hidden nav-item-name mt-[3rem]">Shop</span>
         </Link>
 
         <Link to="/cart" className="flex relative">
-          <div className="flex items-center transition-transform transform hover: translate-x-2">
-            <AiOutlineShoppingCart className="mt-[3rem] mr-2" style={26} />
+          <div className="flex items-center transition-transform transform hover:translate-x-2">
+            <AiOutlineShoppingCart className="mt-[3rem] mr-2" size={26} />
             <span className="hidden nav-item-name mt-[3rem]">Cart</span>
           </div>
         </Link>
