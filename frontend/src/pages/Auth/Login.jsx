@@ -34,8 +34,9 @@ const Login = () => {
       const res = await login({ email, password }).unwrap();
       console.log(res);
       dispatch(setCredentials({ ...res }));
+      navigate(redirect);
     } catch (error) {
-      toast.error(error?.data?.message || error.message);
+      toast.error(error?.data?.message || error.error);
     }
   };
 
@@ -61,7 +62,7 @@ const Login = () => {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
-            <div className="my-[2rem]">
+            <div className="mb-4">
               <label
                 htmlFor="password"
                 className="block text-sm font-medium text-white"

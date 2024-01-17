@@ -106,10 +106,9 @@ const Profile = () => {
                 My Orders
               </Link>
             </div>
+            {loadingUpdateProfile && <Loader />}
           </form>
         </div>
-
-        {loadingUpdateProfile && <Loader />}
       </div>
     </div>
   );
