@@ -33,7 +33,7 @@ const AllProducts = () => {
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-[10rem] object-cover"
+                    className="w-[10rem] h-[10rem] object-cover mr-[0.5rem]"
                   />
                   <div className="p-4 flex flex-col justify-around">
                     <div className="flex justify-between">
@@ -45,7 +45,7 @@ const AllProducts = () => {
                       </p>
                     </div>
 
-                    <p className="text-gray-400 xl:w-[30rem] md:w-[20rem] sm:w-[10rem] text-sm mb-4">
+                    <p className="text-gray-400 xl:w-[30rem] lg:w-[30rem] md:w-[20rem] sm:w-[10rem] text-sm mb-4">
                       {product?.description?.substring(0, 160)}...
                     </p>
 

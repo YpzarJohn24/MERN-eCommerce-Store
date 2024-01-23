@@ -69,7 +69,7 @@ const ProductTabs = ({
                     id="rating"
                     value={rating}
                     onChange={(e) => setRating(e.target.value)}
-                    className="p-2 border rounded-lg xl:w-[40rem] text-black"
+                    className="p-2 border rounded-lg xl:w-[30rem] lg:w-[20rem] md:w-[20rem] text-black"
                     required
                   >
                     <option value="">Select</option>
@@ -90,7 +90,7 @@ const ProductTabs = ({
                     rows="3"
                     value={comment}
                     onChange={(e) => setComment(e.target.value)}
-                    className="p-2 border rounded-lg xl:w-[40rem] text-black"
+                    className="p-2 border rounded-lg xl:w-[30rem] lg:w-[20rem] md:w-[20rem] text-black"
                     required
                   ></textarea>
                 </div>
@@ -141,11 +141,11 @@ const ProductTabs = ({
         {activeTab === 3 && (
           <section className="ml-[4rem] flex flex-wrap">
             {!data ? (
-              <Loader/>
+              <Loader />
             ) : (
               data.map((product) => (
                 <div key={product._id}>
-                  <SmallProduct product={product}/>
+                  <SmallProduct product={product} />
                 </div>
               ))
             )}

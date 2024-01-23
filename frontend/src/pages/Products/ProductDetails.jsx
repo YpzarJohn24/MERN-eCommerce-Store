@@ -64,10 +64,10 @@ const ProductDetails = () => {
 
   return (
     <>
-      <div>
+      <div className="mt-[2rem]">
         <Link
           to="/"
-          className="text-white font-semibold hover:underline ml-[10rem]"
+          className="text-white text-lg font-semibold hover:underline ml-[7rem]"
         >
           Go Back
         </Link>
@@ -81,15 +81,16 @@ const ProductDetails = () => {
         </Message>
       ) : (
         <>
-          <div className="flex flex-wrap relative items-between mt-[2rem] ml-[10rem]">
-            <div>
+          <div className="flex flex-wrap items-between mt-[2rem] ml-[7rem]">
+            <div className="relative">
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full xl:w-[50rem] lg:w-[45rem] md:w-[30rem] sm:w-[20rem] mr-[2rem]"
+                className="w-full object-cover xl:w-[30rem] xl:h-[30rem] lg:w-[30rem] lg:h-[30rem] md:w-[25rem] md:h-[25rem] sm:w-[20rem] sm:h-[20rem] mr-[3rem]"
               />
-
-              <HeartIcon product={product} />
+              <div className="absolute top-0 right-[3rem]">
+                <HeartIcon product={product} />
+              </div>
             </div>
             <div className="flex flex-col justify-between">
               <h2 className="text-2xl font-semibold">{product.name}</h2>
@@ -134,7 +135,7 @@ const ProductDetails = () => {
                 />
 
                 {product.countInStock > 0 && (
-                  <div>
+                  <div className="lg:mr-[150px] md:mr-[70px]">
                     <select
                       value={qty}
                       onChange={(e) => setQty(e.target.value)}
@@ -161,7 +162,7 @@ const ProductDetails = () => {
               </div>
             </div>
 
-            <div className="mt-[5rem] container flex flex-wrap items-start justify-between ml-[10rem]">
+            <div className="mt-[5rem] container flex items-start justify-between ml-[3rem]">
               <ProductTabs
                 loadingProductReview={loadingProductReview}
                 userInfo={userInfo}

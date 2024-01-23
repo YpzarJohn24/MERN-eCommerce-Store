@@ -104,7 +104,7 @@ const Navigation = () => {
       <div className="relative">
         <button
           onClick={toggleDropdown}
-          className="flex items-center text-gray-8000 focus:outline-none"
+          className="flex items-center text-gray-800 focus:outline-none"
         >
           {userInfo ? (
             <span className="text-white">{userInfo.username}</span>
@@ -114,7 +114,7 @@ const Navigation = () => {
           {userInfo && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className={`h-4 w-4 ml-1 ${
+              className={`h-4 w-4 ml-2 ${
                 dropdownOpen ? "transform rotate-180" : ""
               }`}
               fill="none"
@@ -133,7 +133,7 @@ const Navigation = () => {
 
         {dropdownOpen && userInfo && (
           <ul
-            className={`absolute right-0 mt-2 mr-14 space-y-2 bg-white text-gray-600 ${
+            className={`absolute right-0 mt-[-1rem] mr-12 space-y-2 bg-[#1a1a1a] text-white ${
               !userInfo.isAdmin ? "-top-20" : "-top-80"
             }`}
           >
@@ -142,7 +142,7 @@ const Navigation = () => {
                 <li>
                   <Link
                     to="/admin/dashboard"
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    className="block px-4 py-2 hover:bg-gray-100 hover:text-[#000]"
                   >
                     Dashboard
                   </Link>
@@ -150,7 +150,7 @@ const Navigation = () => {
                 <li>
                   <Link
                     to="/admin/productlist"
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    className="block px-4 py-2 hover:bg-gray-100 hover:text-[#000]"
                   >
                     Products
                   </Link>
@@ -158,7 +158,7 @@ const Navigation = () => {
                 <li>
                   <Link
                     to="/admin/categorylist"
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    className="block px-4 py-2 hover:bg-gray-100 hover:text-[#000]"
                   >
                     Category
                   </Link>
@@ -166,7 +166,7 @@ const Navigation = () => {
                 <li>
                   <Link
                     to="/admin/orderlist"
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    className="block px-4 py-2 hover:bg-gray-100 hover:text-[#000]"
                   >
                     Orders
                   </Link>
@@ -174,7 +174,7 @@ const Navigation = () => {
                 <li>
                   <Link
                     to="/admin/userlist"
-                    className="block px-4 py-2 hover:bg-gray-100"
+                    className="block px-4 py-2 hover:bg-gray-100 hover:text-[#000]"
                   >
                     Users
                   </Link>
@@ -183,14 +183,17 @@ const Navigation = () => {
             )}
 
             <li>
-              <Link to="/profile" className="block px-4 py-2 hover:bg-gray-100">
+              <Link
+                to="/profile"
+                className="block px-4 py-2 hover:bg-gray-100 hover:text-[#000]"
+              >
                 Profile
               </Link>
             </li>
             <li>
               <button
                 onClick={logoutHandler}
-                className="block w-full px-4 py-2 text-left hover:bg-gray-100"
+                className="block w-full px-4 py-2 text-left hover:bg-gray-100 hover:text-[#000]"
               >
                 Logout
               </button>

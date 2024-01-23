@@ -142,7 +142,7 @@ const Shop = () => {
                 placeholder="Enter Price"
                 value={priceFilter}
                 onChange={handlePriceChange}
-                className="w-full px-3 py-2 placeholder-gray-400 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+                className="w-full px-3 py-2 placeholder-gray-400 border rounded-lg focus:outline-none focus:ring focus:border-pink-300"
               />
             </div>
             <div className="p-5 pt-0">
@@ -155,7 +155,9 @@ const Shop = () => {
             </div>
           </div>
           <div className="p-3">
-            <h2 className="h4 text-center mb-2">{products?.length} Products</h2>
+            <h2 className="h4 text-center mb-2">
+              ({products?.length}) Products
+            </h2>
             <div className="flex flex-wrap">
               {products.length === 0 ? (
                 <Loader />

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import ProductCarousel from "./ProductCarousel";
 import HeartIcon from "./HeartIcon";
 
 const Product = ({ product }) => {
@@ -9,7 +8,7 @@ const Product = ({ product }) => {
         <img
           src={product.image}
           alt={product.name}
-          className="w-[30rem] rounded"
+          className="w-[30rem] h-[30rem] object-cover rounded"
         />
 
         <HeartIcon product={product} />

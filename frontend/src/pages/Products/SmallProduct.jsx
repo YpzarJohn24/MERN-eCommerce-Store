@@ -8,10 +8,11 @@ const SmallProduct = ({ product }) => {
         <img
           src={product.image}
           alt={product.name}
-          className="h-auto rounded"
+          className="h-[20rem] w-full rounded object-cover"
         />
-        <HeartIcon product={product} />
-
+        <div className="absolute top-0 right-0">
+          <HeartIcon product={product} />
+        </div>
         <div className="p-4">
           <Link to={`/product/${product._id}`}>
             <h2 className="flex justify-between items-center">

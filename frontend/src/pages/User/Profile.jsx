@@ -40,12 +40,12 @@ const Profile = () => {
         dispatch(setCredentials({ ...res }));
         toast.success("Profile update successfully");
       } catch (error) {
-        toast.error(error?.data?.message || error.message);
+        toast.error(error?.data?.message || error.error);
       }
     }
   };
   return (
-    <div className="container mx-auto p-4 mt-[10rem]">
+    <div className="container mx-auto p-4 xl:mt-[8rem] lg:mt-[4rem] md:mt-[3rem]">
       <div className="flex justify-center align-center md:flex md:space-x-4">
         <div className="md:w-1/3">
           <h2 className="text-2xl font-semibold mb-4">Update Profile</h2>

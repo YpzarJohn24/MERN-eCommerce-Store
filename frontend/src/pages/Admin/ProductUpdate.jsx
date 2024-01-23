@@ -104,18 +104,18 @@ const ProductUpdate = () => {
 
   return (
     <>
-      <div className="container xl:mx-[9rem] sm:mx-[0]">
+      <div className="container xl:mx-[9rem] lg:mx-[7rem] md:mx-[5rem] sm:mx-[3rem]">
         <div className="flex flex-col md:flex-row">
           <AdminMenu />
-          <div className="md:w-3/4 p-3">
-            <div className="h-12">Update / Delete Product</div>
+          <div className="md:w-3/4 p-3 mt-[1rem]">
+            <div className="h-12 font-semibold">Update / Delete Product</div>
 
             {image && (
               <div className="text-center">
                 <img
                   src={image}
                   alt="product"
-                  className="block mx-auto max-h-[200px]"
+                  className="block mx-auto max-h-[200px] mb-[1rem]"
                 />
               </div>
             )}
@@ -145,7 +145,7 @@ const ProductUpdate = () => {
                     onChange={(e) => setName(e.target.value)}
                   />
                 </div>
-                <div className="two ml-10">
+                <div className="two xl:ml-10 lg:ml-0">
                   <label htmlFor="name block">Price</label> <br />
                   <input
                     type="number"
@@ -165,7 +165,7 @@ const ProductUpdate = () => {
                     onChange={(e) => setQuantity(e.target.value)}
                   />
                 </div>
-                <div className="two ml-10">
+                <div className="two xl:ml-10 lg:ml-0">
                   <label htmlFor="name block">Brand</label> <br />
                   <input
                     type="text"
@@ -197,7 +197,7 @@ const ProductUpdate = () => {
                   />
                 </div>
 
-                <div>
+                <div className="md:ml-5">
                   <label htmlFor="">Category</label> <br />
                   <select
                     placeholder="Choose Category"
